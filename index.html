@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Portfolio - Ivan Matić</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -38,7 +39,14 @@
     <div class="container">
       <h2>About Me</h2>
       <div class="about-card">
-        <p>My name is Ivan Matić, I am 33 years old and I have been working as a frontend developer for 7 years. Throughout my career, I have gained deep understanding and skills needed for using all the tools related to frontend development, including HTML, CSS, JavaScript, and various frontend frameworks. I graduated from the Faculty of Informatics at Juraj Dobrila University of Pula, where I gained a solid foundation in computer science and programming. Besides my professional interest in technology, in my free time, I like to play video games, enjoy a good coffee, and visit museums. These activities help me relax and get inspired for new projects. I am always open to new challenges and opportunities to learn and look forward to collaborating with you on your future projects.</p>
+        <p>My name is Ivan Matić, I am 33 years old and I have been working as a frontend developer for 7 years.
+          Throughout my career, I have gained deep understanding and skills needed for using all the tools related to
+          frontend development, including HTML, CSS, JavaScript, and various frontend frameworks. I graduated from the
+          Faculty of Informatics at Juraj Dobrila University of Pula, where I gained a solid foundation in computer
+          science and programming. Besides my professional interest in technology, in my free time, I like to play video
+          games, enjoy a good coffee, and visit museums. These activities help me relax and get inspired for new
+          projects. I am always open to new challenges and opportunities to learn and look forward to collaborating with
+          you on your future projects.</p>
       </div>
     </div>
   </section>
@@ -106,14 +114,16 @@
     // Function to disable AOS
     function disableAOS() {
       document.querySelectorAll('[data-aos]').forEach((el) => {
+        el.setAttribute('data-aos-temp', el.getAttribute('data-aos'));
         el.removeAttribute('data-aos');
       });
     }
 
     // Function to enable AOS
     function enableAOS() {
-      document.querySelectorAll('[data-aos]').forEach((el) => {
+      document.querySelectorAll('[data-aos-temp]').forEach((el) => {
         el.setAttribute('data-aos', el.getAttribute('data-aos-temp'));
+        el.removeAttribute('data-aos-temp');
       });
       AOS.init(); // Reinitialize AOS
     }
@@ -131,6 +141,7 @@
       });
     });
   </script>
+
 </body>
 
 </html>

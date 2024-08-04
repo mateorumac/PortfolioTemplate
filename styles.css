@@ -4,12 +4,17 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   background-color: #f0f4f8;
   color: #444;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .container {
@@ -73,6 +78,7 @@ nav .nav-links a:hover {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -94,6 +100,7 @@ nav .nav-links a:hover {
   from {
     transform: scale(0);
   }
+
   to {
     transform: scale(1);
   }
@@ -108,7 +115,9 @@ nav .nav-links a:hover {
   font-size: 1.5rem;
 }
 
-#about, #projects, #contact {
+#about,
+#projects,
+#contact {
   padding: 2rem 0;
 }
 
@@ -128,6 +137,7 @@ nav .nav-links a:hover {
   from {
     transform: translateX(-100%);
   }
+
   to {
     transform: translateX(0);
   }
@@ -191,6 +201,7 @@ h2 {
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(0);
   }
@@ -206,7 +217,9 @@ form label {
   text-align: center;
 }
 
-form input, form textarea, form button {
+form input,
+form textarea,
+form button {
   padding: 0.5rem;
   margin-top: 0.5rem;
   border: 1px solid #ccc;
@@ -265,14 +278,18 @@ footer .social-icons a:hover {
   }
 
   #hero {
-    height: auto; /* Adjusted height for mobile */
-    min-height: 100vh; /* Ensure it takes up at least the full viewport height */
+    height: auto;
+    /* Adjusted height for mobile */
+    min-height: 100vh;
+    /* Ensure it takes up at least the full viewport height */
     padding: 2rem 1rem;
   }
 
   #hero img {
-    width: 200px; /* Smaller width for mobile */
-    height: 200px; /* Smaller height for mobile */
+    width: 200px;
+    /* Smaller width for mobile */
+    height: 200px;
+    /* Smaller height for mobile */
   }
 
   #hero h1 {
@@ -280,8 +297,10 @@ footer .social-icons a:hover {
   }
 
   #hero p {
-    font-size: 1.2rem; /* Adjust font size for mobile */
-    padding: 0 1rem; /* Maintain padding to keep text within bounds */
+    font-size: 1.2rem;
+    /* Adjust font size for mobile */
+    padding: 0 1rem;
+    /* Maintain padding to keep text within bounds */
   }
 
   #about .about-card {
