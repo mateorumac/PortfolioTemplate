@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <nav>
+  <nav id="navbar">
     <div class="container">
       <div class="logo">Ivan Matić</div>
       <ul class="nav-links">
@@ -102,6 +102,34 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init();
+
+    // Function to disable AOS
+    function disableAOS() {
+      document.querySelectorAll('[data-aos]').forEach((el) => {
+        el.removeAttribute('data-aos');
+      });
+    }
+
+    // Function to enable AOS
+    function enableAOS() {
+      document.querySelectorAll('[data-aos]').forEach((el) => {
+        el.setAttribute('data-aos', el.getAttribute('data-aos-temp'));
+      });
+      AOS.init(); // Reinitialize AOS
+    }
+
+    // Listen for click events on navbar links
+    document.querySelectorAll('#navbar a').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        // Disable AOS
+        disableAOS();
+
+        // Wait for the scroll to finish, then re-enable AOS
+        setTimeout(() => {
+          enableAOS();
+        }, 1000); // Adjust the timeout value as needed
+      });
+    });
   </script>
 </body>
 
