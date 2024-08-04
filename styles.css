@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #f0f4f8;
+  color: #444;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+nav {
+  background: #2d3e50;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+}
+
+nav .nav-links {
+  list-style: none;
+}
+
+nav .nav-links li {
+  display: inline;
+  margin-left: 1rem;
+}
+
+nav .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+  color: #ff7043;
+}
+
+#hero {
+  background: linear-gradient(135deg, #8ebf42 0%, #38a1db 100%);
+  color: #fff;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+#hero .hero-content {
+  text-align: center;
+}
+
+#hero img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+#hero h1 {
+  font-size: 4rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#hero p {
+  font-size: 1.5rem;
+}
+
+#about, #projects, #contact {
+  padding: 2rem 0;
+}
+
+#about .about-card {
+  background: #fff;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 2rem;
+  max-width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#about p {
+  text-align: justify;
+  line-height: 1.8;
+}
+
+#projects .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+#projects .gallery-item {
+  background: #fff;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+#projects .gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#projects .gallery-item p {
+  margin-top: 0.5rem;
+}
+
+#projects .gallery-item:hover {
+  transform: translateY(-10px);
+}
+
+#contact .contact-card {
+  background: #fff;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+form input, form textarea, form button {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background: #2d3e50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 120px;
+  align-self: center;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #ff7043;
+}
+
+footer {
+  background: #2d3e50;
+  color: #fff;
+  text-align: center;
+  padding: 0.8rem 0;
+  margin-top: 2rem;
+}
+
+footer .social-icons {
+  margin-top: 0.5rem;
+}
+
+footer .social-icons a {
+  color: #fff;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #ff7043;
+}
+
+@media (max-width: 768px) {
+  nav .nav-links {
+    display: none;
+  }
+
+  nav .logo {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  #hero {
+    height: 40vh;
+    padding: 2rem 1rem;
+  }
+
+  #hero img {
+    width: 200px;
+    height: 200px;
+  }
+
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+
+  #hero p {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  #about .about-card {
+    max-width: 100%;
+  }
+
+  #projects .gallery {
+    grid-template-columns: 1fr;
+  }
+}
