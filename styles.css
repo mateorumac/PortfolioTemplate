@@ -9,6 +9,7 @@ body {
   line-height: 1.6;
   background-color: #f0f4f8;
   color: #444;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .container {
@@ -58,7 +59,6 @@ nav .nav-links a:hover {
 #hero {
   background: linear-gradient(135deg, #8ebf42 0%, #38a1db 100%);
   color: #fff;
-  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,6 +66,16 @@ nav .nav-links a:hover {
   margin-bottom: 2rem;
   padding: 2rem 1rem;
   position: relative;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #hero .hero-content {
@@ -77,6 +87,16 @@ nav .nav-links a:hover {
   height: 250px;
   border-radius: 50%;
   margin-bottom: 1rem;
+  animation: zoomIn 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 #hero h1 {
@@ -101,6 +121,16 @@ nav .nav-links a:hover {
   max-width: 40%;
   margin-left: auto;
   margin-right: auto;
+  animation: slideInLeft 1s ease-in-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 h2 {
@@ -128,6 +158,7 @@ h2 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   transition: transform 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
 }
 
 #projects .gallery-item img {
@@ -153,6 +184,16 @@ h2 {
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+  animation: slideInRight 1s ease-in-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 form {
@@ -224,13 +265,14 @@ footer .social-icons a:hover {
   }
 
   #hero {
-    height: 40vh;
+    height: auto; /* Adjusted height for mobile */
+    min-height: 100vh; /* Ensure it takes up at least the full viewport height */
     padding: 2rem 1rem;
   }
 
   #hero img {
-    width: 200px;
-    height: 200px;
+    width: 200px; /* Smaller width for mobile */
+    height: 200px; /* Smaller height for mobile */
   }
 
   #hero h1 {
@@ -238,8 +280,8 @@ footer .social-icons a:hover {
   }
 
   #hero p {
-    font-size: 1.2rem;
-    padding: 0 1rem;
+    font-size: 1.2rem; /* Adjust font size for mobile */
+    padding: 0 1rem; /* Maintain padding to keep text within bounds */
   }
 
   #about .about-card {
