@@ -7,7 +7,6 @@
 html,
 body {
   overflow-x: hidden;
-  /* Prevent horizontal scrolling */
 }
 
 body {
@@ -279,17 +278,13 @@ footer .social-icons a:hover {
 
   #hero {
     height: auto;
-    /* Adjusted height for mobile */
     min-height: 100vh;
-    /* Ensure it takes up at least the full viewport height */
     padding: 2rem 1rem;
   }
 
   #hero img {
     width: 200px;
-    /* Smaller width for mobile */
     height: 200px;
-    /* Smaller height for mobile */
   }
 
   #hero h1 {
@@ -298,9 +293,7 @@ footer .social-icons a:hover {
 
   #hero p {
     font-size: 1.2rem;
-    /* Adjust font size for mobile */
     padding: 0 1rem;
-    /* Maintain padding to keep text within bounds */
   }
 
   #about .about-card {
